@@ -12,9 +12,47 @@
 
 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
-	</head>
+  </head>
+ <style>
+    :root {
+ 		 --margin: 3px;
+		}
+
+		body {
+		  padding: 10px;
+		}
+    
+  	.container-box {
+  		display: flex;
+  		flex-wrap: wrap;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+		}
+    
+    .a {
+  		width: calc((100%/3) - (var(--margin)* 2));
+     
+      
+		}
+    
+    .box {
+  		background-color: #9009A0;
+  		border-radius: 5px;
+  		margin: var(--margin);
+ 			height: 1000px;
+/*       flex-grow: 1; */
+		}
+    
+  </style>
+  
 	<body>
 		<!-- Your layout here -->
+    <div class="container-box">
+  		<div class="box a"></div>
+  		<div class="box a"></div>
+  		<div class="box a"></div>
+    </div>
 
 	</body>
 </html>
